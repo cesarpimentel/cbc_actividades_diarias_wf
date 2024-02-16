@@ -1,6 +1,5 @@
 {
   "name": "CBC_Actividades_Diarias_WF",
-  "projectId": "2b00f7b9-488b-4c3e-9daa-0eb2cc58fae0",
   "description": "Actividades Diarias Workforce de CBC",
   "main": "Main.xaml",
   "dependencies": {
@@ -23,7 +22,6 @@
     "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
-    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
@@ -31,8 +29,7 @@
     "executionType": "Workflow",
     "readyForPiP": false,
     "startsInPiP": false,
-    "mustRestoreAllDependencies": true,
-    "pipType": "ChildSession"
+    "mustRestoreAllDependencies": true
   },
   "designOptions": {
     "projectProfile": "Developement",
@@ -42,10 +39,12 @@
       "privateWorkflows": []
     },
     "processOptions": {
-      "ignoredFiles": []
+      "ignoredFiles": [
+        "Data/Input/Archivo de Entrada Consolidado.xlsx"
+      ]
     },
     "fileInfoCollection": [],
-    "saveToCloud": false
+    "modernBehavior": false
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
