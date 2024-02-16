@@ -39,9 +39,7 @@
       "privateWorkflows": []
     },
     "processOptions": {
-      "ignoredFiles": [
-        "Data/Input/Archivo de Entrada Consolidado.xlsx"
-      ]
+      "ignoredFiles": []
     },
     "fileInfoCollection": [],
     "modernBehavior": false
