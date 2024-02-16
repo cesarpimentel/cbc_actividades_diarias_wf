@@ -1,0 +1,305 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ZCARGA_DOC3" this:ZCARGA_DOC3.in_TransactionName="ZCARGA_DOC3" this:ZCARGA_DOC3.in_ExecuteSM35="True" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Nombre de juego de datos" Name="in_layaout" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="Path donde esta guardado el archivo que se desea cargar" Name="in_pathFile" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="Archivo de credenciales" Name="in_pathCredentialFile" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="Contraseña del archivo de credenciales" Name="in_PathCredentialsPassword" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="Nombre de la transacción" Name="in_TransactionName" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="Si no desea ejecutar el Workflow de la transacción SM35, pasele el argumento como 'False' de lo contrario dejelo en 'True'." Name="in_ExecuteSM35" Type="InArgument(x:Boolean)" />
+    <x:Property sap2010:Annotation.AnnotationText="Sistema de SAP" Name="in_sapSystem" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:ZCARGA_DOC3.in_layaout>
+    <InArgument x:TypeArguments="x:String">
+      <Literal x:TypeArguments="x:String" Value="" />
+    </InArgument>
+  </this:ZCARGA_DOC3.in_layaout>
+  <this:ZCARGA_DOC3.in_pathCredentialFile>
+    <InArgument x:TypeArguments="x:String">
+      <Literal x:TypeArguments="x:String" Value="" />
+    </InArgument>
+  </this:ZCARGA_DOC3.in_pathCredentialFile>
+  <this:ZCARGA_DOC3.in_PathCredentialsPassword>
+    <InArgument x:TypeArguments="x:String">
+      <Literal x:TypeArguments="x:String" Value="" />
+    </InArgument>
+  </this:ZCARGA_DOC3.in_PathCredentialsPassword>
+  <this:ZCARGA_DOC3.in_sapSystem>
+    <InArgument x:TypeArguments="x:String">
+      <Literal x:TypeArguments="x:String" Value="" />
+    </InArgument>
+  </this:ZCARGA_DOC3.in_sapSystem>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>514.4,1035.2</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ZCARGA_DOC3_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="37">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="29">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ZCARGA_DOC3" sap:VirtualizedContainerService.HintSize="524.8,970.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:Comment sap:VirtualizedContainerService.HintSize="483.2,56" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Transacción ZCARGA_DOC3" />
+    <If sap2010:Annotation.AnnotationText="Se inicia sesión con otro usuario diferente que el actual." Condition="[in_pathCredentialFile &lt;&gt; &quot;&quot; and in_PathCredentialsPassword &lt;&gt; &quot;&quot; and in_sapSystem &lt;&gt; &quot;&quot;]" DisplayName="Iniciar SAP" sap:VirtualizedContainerService.HintSize="483.2,288.8" sap2010:WorkflowViewState.IdRef="If_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence DisplayName="Iniciar" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Iniciar sap" sap:VirtualizedContainerService.HintSize="420,578.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="userName" />
+              <Variable x:TypeArguments="ss:SecureString" Name="password" />
+              <Variable x:TypeArguments="x:String" Name="mandante" />
+              <Variable x:TypeArguments="x:String" Name="lenguaje" />
+              <Variable x:TypeArguments="x:String" Name="conexion" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="378.4,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="saplogon" />
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke GetAppCredentials workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Documentation\Framework\GetAppCredentials.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <OutArgument x:TypeArguments="x:String" x:Key="out_Username">[userName]</OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_Credential">[in_sapSystem]</InArgument>
+                <OutArgument x:TypeArguments="ss:SecureString" x:Key="out_Password">[password]</OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_PathCredentialFile">[in_pathCredentialFile]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_PasswordCredentialFile">[in_PathCredentialsPassword]</InArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="out_Mandante">[mandante]</OutArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="out_Lenguaje">[lenguaje]</OutArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="out_Conexion">[conexion]</OutArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Login SAP workflow" sap:VirtualizedContainerService.HintSize="378.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="SAP\Login SAP.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="in_Username">[userName]</InArgument>
+                <InArgument x:TypeArguments="ss:SecureString" x:Key="in_Password">[password]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_Mandante">[mandante]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_Lenguaje">[lenguaje]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_Conexion">[conexion]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_ExecutablePathSAP">C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </Sequence>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <ucas:CallTransaction DisplayName="Call Transaction ZCARGA_DOC3" sap:VirtualizedContainerService.HintSize="483.2,52.8" sap2010:WorkflowViewState.IdRef="CallTransaction_1" Transaction="[in_TransactionName]">
+      <ucas:CallTransaction.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c53f2e4d-2b9b-4235-b91c-63cf0064a22e" InformativeScreenshot="f205eb188f79410b26df0843c606af02" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ucas:CallTransaction.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ucas:CallTransaction>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Usar SAP" sap:VirtualizedContainerService.HintSize="483.2,360" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="a781bdfe-434c-4f62-aed6-9b0ea5a1a344" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="ZCARGA_DOC3" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="User" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Path File" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="a781bdfe-434c-4f62-aed6-9b0ea5a1a344" Text="[in_pathFile]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="369, 193, 479, 25" ElementType="InputBox" FriendlyName="'c:\Archivo.txt'" FullSelectorArgument="&lt;sap id='usr/ctxtDATASET' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtDATASET' /&gt;" Guid="eb65d278-002f-45b2-8f70-373ad4baf2ee" InformativeScreenshot="ee17782df4ba40c7c3403d9866084098.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Carga de Ajustes de Cuentas - Plantilla con Centro' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <If Condition="[in_layaout &lt;&gt; &quot;&quot;]" DisplayName="Escribir Layaout" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="If_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="375.2,312.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'AJUSTE_CONT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="a781bdfe-434c-4f62-aed6-9b0ea5a1a344" Text="[in_layaout]" Version="V1">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="369, 220, 129, 25" ElementType="InputBox" FriendlyName="'AJUSTE_CONT'" FullSelectorArgument="&lt;sap id='usr/txtGROUP' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/txtGROUP' /&gt;" Guid="43f8cb70-3d32-4917-87d7-39795576e61c" InformativeScreenshot="de71b63ffd2276e24271c9b163c905f3.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Carga de Ajustes de Cuentas - Plantilla con Centro' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <uix:NClick ClickType="Single" DisplayName="Ejecutar" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a781bdfe-434c-4f62-aed6-9b0ea5a1a344" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="35, 149, 24, 25" ElementType="Button" FriendlyName="'Button Ejecutar (F8)'" FullSelectorArgument="&lt;sap id='tbar[1]/btn[8]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[1]/btn[8]' /&gt;" Guid="698fbddf-3722-4b19-a35d-269100cfabf1" InformativeScreenshot="72d019bbec21c8965550b77fc0a44361.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Carga de Ajustes de Cuentas - Plantilla con Centro' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Permitir" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a781bdfe-434c-4f62-aed6-9b0ea5a1a344" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="21, 188, 83, 26" ElementType="Button" FriendlyName="'Permitir'" FullSelectorArgument="&lt;ctrl name='Permitir' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Permitir' role='push button' automationid='' check:text='Permitir' /&gt;" Guid="59532e0a-4964-47f3-a7f3-26d5c2b054c0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFcAAAAeCAYAAABZn4LIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKmSURBVGhD7dpBa9NgHMfxvJbBXsIOO+2wV+Fh9DKGoLsMZAdBBQnqxXqYTJxuOIVKEcVL8aA3GXooeNhQKWzSwSwV7crstNuan8//SZ6sTZ6nyZOYbrTP4UvT/9Okzadp18OsevMQpmwyuBnm4/6pPcXj5euYnb1oShj5kWMI9/69q3j1/Bac9g5wVDVpRm7kR44h3PnLl9DcXYdztAd0fps0IzfyI0clLo6/A633Jt2YWzTuSV2+s6l/zC0S1znele9s6hu5ReO2vwIHb02akVtf3H3CbW0AzdcmzciN/JS4jeoTOAfvgEYhYYuYsyxYPY0jX5Y9NsPKM5i0plHSXUsRuZFf5riTdt6fVexxjjxXDD52AHHIwby5Z4KLRh75CXYF5xa7ZgNq+HELKOUY7sQMKt59cTW7dX1EfQzx9cLW+Ixd+bZ7K/bjz+GtubMuxJ55d+J44jbwXOJ1JOhcXLkcNggt7vsoQXA2k705oZm3XwjQO1ZoLT2q6Exw3ZMWJ0jrspP1ZkqMGLPi9Onz8PU4uIG1FA0MN/RRFOv8hILrbvwPnhJDc8a3hxQ3+J3rF3VCSgzNGd8eNVxvXfmzTImhOePb5wz357c19qA3wK+1hC14uHcka278l4M1hVLPzLtfvsBOeIyd8OlaohnfpmNKXo9Ykx0jReRGfkrcH9urcJovpTvHKxqXqthjvd+5uQV3LQot7oxve29YcarruQRqBrjMjfyUuLXKCjqpcEc3ciM/Je7elwfo7CfH7bkaJcn2GZbIjfyUuNXNpVS4oxy5kZ8Sd/vTXZw0Xkh3NvWP3MhPibv14TZatQL+1lZMmpEb+UlxHy5dw+ryFWxu3MTnj7ZJM3IjP3IM4bbrz7D+6Ib0nx1M8SI/cgzhmv5/BjezDvEPFaNE5OtU70QAAAAASUVORK5CYII=" InformativeScreenshot="b3857ae813a298779b3aba8e1c5083f6.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Seguridad SAP GUI' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" SelectionStrategy="AA" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Atrás" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a781bdfe-434c-4f62-aed6-9b0ea5a1a344" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="321, 60, 27, 27" ElementType="Button" FriendlyName="'Button Atrás (F3)'" FullSelectorArgument="&lt;sap id='tbar[0]/btn[3]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[3]' /&gt;" Guid="59471561-448a-4a6b-956e-b052853a2776" InformativeScreenshot="3df069d32a8890b3c6542dc875ad4216.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Carga de Ajustes de Cuentas - Plantilla con Centro' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Atrás" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a781bdfe-434c-4f62-aed6-9b0ea5a1a344" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="321, 60, 27, 27" ElementType="Button" FriendlyName="'Button Atrás (F3)'" FullSelectorArgument="&lt;sap id='tbar[0]/btn[3]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[3]' /&gt;" Guid="59471561-448a-4a6b-956e-b052853a2776" InformativeScreenshot="7dab626949b953a5764258a899d900e9.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Carga de Ajustes de Cuentas - Plantilla con Centro' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NGetAttribute Attribute="sapUser" DisplayName="Obtener Usuario actual" sap:VirtualizedContainerService.HintSize="333.6,208" sap2010:WorkflowViewState.IdRef="NGetAttribute_1" ScopeIdentifier="a781bdfe-434c-4f62-aed6-9b0ea5a1a344" Version="V1">
+              <uix:NGetAttribute.Result>
+                <OutArgument x:TypeArguments="x:String">[User]</OutArgument>
+              </uix:NGetAttribute.Result>
+              <uix:NGetAttribute.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="1660, 1008, 26, 24" FriendlyName="'saplogon.exe Batch'" Guid="bd640bf4-1966-48a0-a1de-1b8125cd94dd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAYCAYAAADkgu3FAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEUSURBVEhL3dCxasJAGMDxvIsv0bVjLZ3qpjh28gl0KOIzSLqVTI6dLG6CS8WathFiK0VQSw4bE7Uxxi7JV+/gQOWSWIRvyMEfjhz3/Y5IgLSkIAgAo2RB3uYXB/pxVjjQ1JwlDBpNjHDIcRwwTRMMwxBGCGFZlgWu6wpn8PqDYTjUaKpwla/AZa7MSmfLcJG9ZdE9PaMVinewcjfCGbzX3jtIvu9DWLJSh9TZjbDzTIlFpnM2THSf13nphUP8NdX7OmsPud4C33NWHEJDg9rdt+hfxzGarDzuIfy76N5hT88xEG0Xqz20toh9NMA7CuLtgqLzqP4FnVK7q+FAqqYnDNI/PnGg8RfBgezFEgdaex4W5MEfXqde9F7kcxUAAAAASUVORK5CYII=" InformativeScreenshot="f95919f192b3a049539c4ac973fd0b60.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Batch input: Resumen de juegos de datos' /&gt;" SearchSteps="Image" TargetType="ImageBased" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="25, 1004, 1888, 36" FriendlyName="'Statusbar sbar'" FullSelectorArgument="&lt;sap id='sbar' /&gt;" FuzzySelectorArgument="&lt;sap id='sbar' /&gt;" ImageBase64="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" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetAttribute.Target>
+            </uix:NGetAttribute>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow SM35" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="SAP\SM35.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TransactionName">
+                  <Literal x:TypeArguments="x:String">SM35</Literal>
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_Autor">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="User" />
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1048" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SapGui\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJ1SURBVFhH7dfPT9NgGMDxzr/BkwmRBBKIXPwDYK2IR05eOHnyZAwjRJH9gCgekOhZ5ihmrHSbK4igGBMPM2IwbgdMMGGK0ShEQ7YBYxv7hU993pkuur0hg7ZJTXr4nJqs37xv36cdI8uyBQAYozID1TID1TID1TID1fo/As85pSvIbzBCp0u6rAT6EBjILvL2T75qMGJgGnlHpUjL31tslMAU4u/NRdtS2fwJIwYGbwXfNmdyhcrBZWKx2MnukbnZrqEZ0Afe2BECzhmiBSn20ZPeiXCjElYJ/BnffrH47lP64ctV0MNoaBm6b0rAOh7RwogMmhzwvm6ojisH7mQK8nY6D1pLpHKw+uUHuPjn0DUwBaw9WB32C+0gYWwm0lo6OKiJ0y0wiXErHzfB4Z4Hts8N1usCrmDNFmcRf/dx9Mxu5s+BoNElcH0jAUMTC8DaxjHOh6tHnsF/4oinw/7l5my+eOibTPPAtW9b4PTMQ/vV+9BB4mqfPXIgpvv48ClaUDXNApN7OVjfTIDrwQJwNjd0XJsCzk7iKltLnjky50S7b+k0LYaGwR9+/+HrVjIa24Do2vdjC698xm19Bu294xjnq44jyOuLH5uNtBWKJWoMDdN5/sLZS3ekxZ7bAegZEY/t4rAA1n4PbqsAHG4r56iEEXnkxwPRctiBoGHi8bjFOhjwWW+IoMqgWB4lbO3KFVHAKSw15QqlI3/a6f2qIysXsHnC1CFcD70ClSEsuqbfNNFuXC+9AvcQGcKtuK3UG9dLj0Ay50RyWo96IGiUQC0/+V045xpxlGjyX6ccSLtgFGagWmagWmagWmagWuVA45ItvwHtMtUIY59o7AAAAABJRU5ErkJggg==" InformativeScreenshot="3558c648878b9e6088c9513171b791cb.png" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Carga de Ajustes de Cuentas - Plantilla con Centro' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

@@ -1,0 +1,131 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="VA01" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1488,1736.8" sap2010:WorkflowViewState.IdRef="VA01_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Cryptography</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="VA01" sap:VirtualizedContainerService.HintSize="475.2,1672" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ucas:CallTransaction DisplayName="Call Transaction 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="433.6,160.8" sap2010:WorkflowViewState.IdRef="CallTransaction_1" Transaction="VA01">
+      <ucas:CallTransaction.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="481a633d-b24c-41b9-8c53-d264baa7ab03" InformativeScreenshot="a5fc12a23871bad97bd01099bdf9b7f7" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ucas:CallTransaction.Target>
+    </ucas:CallTransaction>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: Crear pedido de cliente: Acceso" sap:VirtualizedContainerService.HintSize="433.6,1378.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="d3eedebe-ee49-4a99-adb4-bedc796ccde5" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,1087.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Clase'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="d3eedebe-ee49-4a99-adb4-bedc796ccde5" Text="ZTEC" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="199, 197, 39, 20" ElementType="InputBox" FriendlyName="'CTextField Clase'" FullSelectorArgument="&lt;sap id='usr/ctxtVBAK-AUART' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtVBAK-AUART' /&gt;" Guid="26578d26-d0d7-48b2-8bda-23147cd040cd" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Crear pedido de cliente: Acceso' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Organización'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="d3eedebe-ee49-4a99-adb4-bedc796ccde5" Text="EV03" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="199, 262, 39, 20" ElementType="InputBox" FriendlyName="'CTextField Organización'" FullSelectorArgument="&lt;sap id='usr/ctxtVBAK-VKORG' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtVBAK-VKORG' /&gt;" Guid="80f9159e-773d-42db-9ea3-414e975cfee6" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Crear pedido de cliente: Acceso' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Canal'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="d3eedebe-ee49-4a99-adb4-bedc796ccde5" Text="55" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="199, 283, 23, 20" ElementType="InputBox" FriendlyName="'CTextField Canal'" FullSelectorArgument="&lt;sap id='usr/ctxtVBAK-VTWEG' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtVBAK-VTWEG' /&gt;" Guid="a2a72c69-c60c-43a5-8799-fa850035e989" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Crear pedido de cliente: Acceso' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CTextField Sector'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="d3eedebe-ee49-4a99-adb4-bedc796ccde5" Text="01[k(enter)]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="199, 305, 23, 20" ElementType="InputBox" FriendlyName="'CTextField Sector'" FullSelectorArgument="&lt;sap id='usr/ctxtVBAK-SPART' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtVBAK-SPART' /&gt;" Guid="ed6eaf05-ac4a-4d47-a379-24f740b92968" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Crear pedido de cliente: Acceso' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="1913, -7, 1934, 1054" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SapGui\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJ1SURBVFhH7dfPT9NgGMDxzr/BkwmRBBKIXPwDYK2IR05eOHnyZAwjRJH9gCgekOhZ5ihmrHSbK4igGBMPM2IwbgdMMGGK0ShEQ7YBYxv7hU993pkuur0hg7ZJTXr4nJqs37xv36cdI8uyBQAYozID1TID1TID1TID1fo/As85pSvIbzBCp0u6rAT6EBjILvL2T75qMGJgGnlHpUjL31tslMAU4u/NRdtS2fwJIwYGbwXfNmdyhcrBZWKx2MnukbnZrqEZ0Afe2BECzhmiBSn20ZPeiXCjElYJ/BnffrH47lP64ctV0MNoaBm6b0rAOh7RwogMmhzwvm6ojisH7mQK8nY6D1pLpHKw+uUHuPjn0DUwBaw9WB32C+0gYWwm0lo6OKiJ0y0wiXErHzfB4Z4Hts8N1usCrmDNFmcRf/dx9Mxu5s+BoNElcH0jAUMTC8DaxjHOh6tHnsF/4oinw/7l5my+eOibTPPAtW9b4PTMQ/vV+9BB4mqfPXIgpvv48ClaUDXNApN7OVjfTIDrwQJwNjd0XJsCzk7iKltLnjky50S7b+k0LYaGwR9+/+HrVjIa24Do2vdjC698xm19Bu294xjnq44jyOuLH5uNtBWKJWoMDdN5/sLZS3ekxZ7bAegZEY/t4rAA1n4PbqsAHG4r56iEEXnkxwPRctiBoGHi8bjFOhjwWW+IoMqgWB4lbO3KFVHAKSw15QqlI3/a6f2qIysXsHnC1CFcD70ClSEsuqbfNNFuXC+9AvcQGcKtuK3UG9dLj0Ay50RyWo96IGiUQC0/+V045xpxlGjyX6ccSLtgFGagWmagWmagWmagWuVA45ItvwHtMtUIY59o7AAAAABJRU5ErkJggg==" InformativeScreenshot="8b5593dc5b4c37275357202fab3429fd.png" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Crear pedido de cliente: Acceso' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

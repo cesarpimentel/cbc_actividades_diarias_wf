@@ -1,0 +1,290 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SM35" this:SM35.in_TransactionName="SM35" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Nombre de transacción" Name="in_TransactionName" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="El usuario con el que se subio el Batch" Name="in_Autor" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>986.4,706.4</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>SM35_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="56">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SM35" sap:VirtualizedContainerService.HintSize="475.2,641.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:Comment sap:VirtualizedContainerService.HintSize="433.6,56" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Transacción SM35" />
+    <ucas:CallTransaction DisplayName="Call Transaction SM35" sap:VirtualizedContainerService.HintSize="433.6,52.8" sap2010:WorkflowViewState.IdRef="CallTransaction_1" Transaction="[in_TransactionName]">
+      <ucas:CallTransaction.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="aa32c417-726a-4f27-8ec1-be045b7cce8d" InformativeScreenshot="13758cec253b417834f65fdd77873929" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ucas:CallTransaction.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ucas:CallTransaction>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Usar SAP" sap:VirtualizedContainerService.HintSize="433.6,360" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="67bee734-644b-4094-9a86-ae955571209a" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Batch Input" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="isCheck" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="0.5" DisplayName="Escribir Autor" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="375.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="67bee734-644b-4094-9a86-ae955571209a" Text="[in_Autor+&quot;[k(enter)]&quot;]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="729, 220, 129, 25" ElementType="InputBox" FriendlyName="'*'" FullSelectorArgument="&lt;sap id='usr/subD1000_HEADER:SAPMSBDC_CC:1005/txtD0100-CREATOR' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/subD1000_HEADER:SAPMSBDC_CC:1005/txtD0100-CREATOR' /&gt;" Guid="4492c4c5-af1e-489d-aa59-5737c512ce63" InformativeScreenshot="1593a8a8d38b75916ac4c85d86440a51.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Batch input: Resumen de juegos de datos' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Seleccionar elemento" sap:VirtualizedContainerService.HintSize="375.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="67bee734-644b-4094-9a86-ae955571209a" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="39, 355, 25, 25" FriendlyName="'TableRow'" FullSelectorArgument="&lt;sap id='usr/tabsD1000_TABSTRIP/tabpALLE/ssubD1000_SUBSCREEN:SAPMSBDC_CC:1010/tblSAPMSBDC_CCTC_APQI' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsD1000_TABSTRIP/tabpALLE/ssubD1000_SUBSCREEN:SAPMSBDC_CC:1010/tblSAPMSBDC_CCTC_APQI' /&gt;" Guid="a42cead8-88bb-4ea5-8a7a-69b0e6842523" InformativeScreenshot="9dc25e0b2b10ea41f68348bebb0834c3.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Batch input: Resumen de juegos de datos' /&gt;" SearchSteps="Selector" Visibility="Interactive">
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset Position="BottomRight" X="-10" Y="-10" />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Ejecutar" sap:VirtualizedContainerService.HintSize="375.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="67bee734-644b-4094-9a86-ae955571209a" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="125, 149, 94, 25" ElementType="Button" FriendlyName="'Ejecutar'" FullSelectorArgument="&lt;sap id='tbar[1]/btn[8]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[1]/btn[8]' check:text='Ejecutar' /&gt;" Guid="a60f08af-2964-4cef-bb5e-823ae119b4bb" InformativeScreenshot="24cd7182e4064dc7b55b3bb976a5275b.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Batch input: Resumen de juegos de datos' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Visual.sólo errores" sap:VirtualizedContainerService.HintSize="375.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="67bee734-644b-4094-9a86-ae955571209a" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="14, 121, 219, 25" FriendlyName="'Visual.sólo errores'" FullSelectorArgument="&lt;sap id='usr/radD0300-ERROR' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/radD0300-ERROR' check:text='Visual.sólo errores' /&gt;" Guid="225f999a-fef3-4635-830b-cec899246699" InformativeScreenshot="017267df04ebbeb054a5072eb904216a.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Ejecutar juego de datos AJUSTE_CONT' idx='*' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <Sequence sap2010:Annotation.AnnotationText="Elegir funciones adicionales." DisplayName="Funciones adicionales" sap:VirtualizedContainerService.HintSize="375.2,1305.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NGetAttribute Attribute="checked" DisplayName="Obtener atributo de Log ampliado" sap:VirtualizedContainerService.HintSize="333.6,208" sap2010:WorkflowViewState.IdRef="NGetAttribute_1" ScopeIdentifier="67bee734-644b-4094-9a86-ae955571209a" Version="V1">
+                <uix:NGetAttribute.Result>
+                  <OutArgument x:TypeArguments="x:Boolean">[isCheck]</OutArgument>
+                </uix:NGetAttribute.Result>
+                <uix:NGetAttribute.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="324, 94, 229, 25" ElementType="CheckBox" FriendlyName="'Log ampliado'" FullSelectorArgument="&lt;sap id='usr/chkD0300-LOGALL' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/chkD0300-LOGALL' check:text='Log ampliado' /&gt;" Guid="98a2af84-f5fd-426e-8d6a-15153a433666" InformativeScreenshot="e31a663036562348bb2df565b0ab55cf.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Ejecutar juego de datos AJUSTE_CONT' idx='*' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                </uix:NGetAttribute.Target>
+              </uix:NGetAttribute>
+              <If Condition="[not isCheck]" DisplayName="Dar click" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="If_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="375.2,252" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Log ampliado'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="67bee734-644b-4094-9a86-ae955571209a" Version="V1">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="324, 94, 229, 25" ElementType="CheckBox" FriendlyName="'Log ampliado'" FullSelectorArgument="&lt;sap id='usr/chkD0300-LOGALL' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/chkD0300-LOGALL' check:text='Log ampliado' /&gt;" Guid="a77b75d7-c46f-451d-982c-03db90dc9bf1" InformativeScreenshot="4883604fdf7959cdfe2ba42e2d9a5fd9.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Ejecutar juego de datos AJUSTE_CONT' idx='*' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+              <uix:NGetAttribute Attribute="checked" DisplayName="Obtener atributo de Modo experto" sap:VirtualizedContainerService.HintSize="333.6,208" sap2010:WorkflowViewState.IdRef="NGetAttribute_2" ScopeIdentifier="67bee734-644b-4094-9a86-ae955571209a" Version="V1">
+                <uix:NGetAttribute.Result>
+                  <OutArgument x:TypeArguments="x:Boolean">[isCheck]</OutArgument>
+                </uix:NGetAttribute.Result>
+                <uix:NGetAttribute.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="324, 121, 219, 25" ElementType="CheckBox" FriendlyName="'Modo experto'" FullSelectorArgument="&lt;sap id='usr/chkD0300-EXPERT' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/chkD0300-EXPERT' check:text='Modo experto' /&gt;" Guid="9632ca8f-7b80-481b-8b7c-8d4ecbc73bb8" InformativeScreenshot="cd2d6eabdfeb11b187966e7476096eee.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Ejecutar juego de datos AJUSTE_CONT' idx='*' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                </uix:NGetAttribute.Target>
+              </uix:NGetAttribute>
+              <If Condition="[not isCheck]" DisplayName="Dar click" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="If_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="375.2,252" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Modo experto'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="67bee734-644b-4094-9a86-ae955571209a" Version="V1">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="324, 121, 219, 25" ElementType="CheckBox" FriendlyName="'Modo experto'" FullSelectorArgument="&lt;sap id='usr/chkD0300-EXPERT' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/chkD0300-EXPERT' check:text='Modo experto' /&gt;" Guid="dfec2423-2ebc-4900-8a09-9db1b575c8c5" InformativeScreenshot="11c5d3e1cc06600e2cfcf9db91532636.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Ejecutar juego de datos AJUSTE_CONT' idx='*' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+              <uix:NGetAttribute Attribute="checked" DisplayName="Obtener atributo de Tam.estándar dynpro" sap:VirtualizedContainerService.HintSize="333.6,208" sap2010:WorkflowViewState.IdRef="NGetAttribute_3" ScopeIdentifier="67bee734-644b-4094-9a86-ae955571209a" Version="V1">
+                <uix:NGetAttribute.Result>
+                  <OutArgument x:TypeArguments="x:Boolean">[isCheck]</OutArgument>
+                </uix:NGetAttribute.Result>
+                <uix:NGetAttribute.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="324, 148, 219, 25" ElementType="CheckBox" FriendlyName="'Tam.estándar dynpro'" FullSelectorArgument="&lt;sap id='usr/chkD0300-DYDEFSIZE' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/chkD0300-DYDEFSIZE' check:text='Tam.estándar dynpro' /&gt;" Guid="29b52a7c-4372-46f2-bab6-52bed6b749e7" InformativeScreenshot="dd4022e58146abef2537f415fafd96fb.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Ejecutar juego de datos AJUSTE_CONT' idx='*' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                </uix:NGetAttribute.Target>
+              </uix:NGetAttribute>
+              <If Condition="[not isCheck]" DisplayName="Dar click" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="If_3">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="375.2,252" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Tam.estándar dynpro'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="67bee734-644b-4094-9a86-ae955571209a" Version="V1">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="324, 148, 219, 25" ElementType="CheckBox" FriendlyName="'Tam.estándar dynpro'" FullSelectorArgument="&lt;sap id='usr/chkD0300-DYDEFSIZE' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/chkD0300-DYDEFSIZE' check:text='Tam.estándar dynpro' /&gt;" Guid="90213358-9db3-430e-a38d-9dfba157a200" InformativeScreenshot="7b4385ba8bcbad5d000e67da283bcd42.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Ejecutar juego de datos AJUSTE_CONT' idx='*' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+              <uix:NClick ClickType="Single" DisplayName="Ejecutar" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="67bee734-644b-4094-9a86-ae955571209a" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="593, 275, 69, 26" ElementType="Button" FriendlyName="'Ejecutar'" FullSelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[0]' check:text='Ejecutar' /&gt;" Guid="10da0f71-4c81-46e6-84a6-9ee632f37536" InformativeScreenshot="495b57243718f0f5fb0a7abe1e61945b.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Ejecutar juego de datos AJUSTE_CONT' idx='*' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+            <uix:NClick ClickType="Single" DisplayName="Finalizar batch input" sap:VirtualizedContainerService.HintSize="375.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="67bee734-644b-4094-9a86-ae955571209a" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="439, 167, 143, 26" ElementType="Button" FriendlyName="'Finalizar batch input'" FullSelectorArgument="&lt;sap id='tbar[0]/btn[12]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[12]' check:text='Finalizar batch input' /&gt;" Guid="34355832-f853-4c85-af3e-25a75cc99a7e" InformativeScreenshot="e783e3dbd2408222abd7667dd537802c.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Información' idx='*' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1048" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SapGui\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJ1SURBVFhH7dfPT9NgGMDxzr/BkwmRBBKIXPwDYK2IR05eOHnyZAwjRJH9gCgekOhZ5ihmrHSbK4igGBMPM2IwbgdMMGGK0ShEQ7YBYxv7hU993pkuur0hg7ZJTXr4nJqs37xv36cdI8uyBQAYozID1TID1TID1TID1fo/As85pSvIbzBCp0u6rAT6EBjILvL2T75qMGJgGnlHpUjL31tslMAU4u/NRdtS2fwJIwYGbwXfNmdyhcrBZWKx2MnukbnZrqEZ0Afe2BECzhmiBSn20ZPeiXCjElYJ/BnffrH47lP64ctV0MNoaBm6b0rAOh7RwogMmhzwvm6ojisH7mQK8nY6D1pLpHKw+uUHuPjn0DUwBaw9WB32C+0gYWwm0lo6OKiJ0y0wiXErHzfB4Z4Hts8N1usCrmDNFmcRf/dx9Mxu5s+BoNElcH0jAUMTC8DaxjHOh6tHnsF/4oinw/7l5my+eOibTPPAtW9b4PTMQ/vV+9BB4mqfPXIgpvv48ClaUDXNApN7OVjfTIDrwQJwNjd0XJsCzk7iKltLnjky50S7b+k0LYaGwR9+/+HrVjIa24Do2vdjC698xm19Bu294xjnq44jyOuLH5uNtBWKJWoMDdN5/sLZS3ekxZ7bAegZEY/t4rAA1n4PbqsAHG4r56iEEXnkxwPRctiBoGHi8bjFOhjwWW+IoMqgWB4lbO3KFVHAKSw15QqlI3/a6f2qIysXsHnC1CFcD70ClSEsuqbfNNFuXC+9AvcQGcKtuK3UG9dLj0Ay50RyWo96IGiUQC0/+V045xpxlGjyX6ccSLtgFGagWmagWmagWmagWuVA45ItvwHtMtUIY59o7AAAAABJRU5ErkJggg==" InformativeScreenshot="70d1eb3e197d03ea5200090564ff098f.png" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Batch input: Resumen de juegos de datos' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
