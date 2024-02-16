@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kz5KkqLzCU0ZumMLbR6D+Z5LBFtJlvOWYs4xco+KMXW/e+PGuSESjSSSUhoqZmmIpyVpVYiGE3xs2JB838S/pg==",
+  "dgSpecHash": "9FHjqHMVqI05MZwgw8oEmUZCwNKfOhCMKBC3ENlMvnTGtu/aj6zT9s2HP14R0+4RcWYVoUsg59Hothbz6bJh/A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cjgarcia\\Documents\\UiPath\\CBC_Actividades_Diarias_WF\\.local\\",
+  "projectFilePath": "C:\\Users\\cjgarcia\\Documents\\UiPath\\cbc_actividades_diarias_wf\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\cjgarcia\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\cjgarcia\\.nuget\\packages\\closedxml\\0.87.1\\closedxml.0.87.1.nupkg.sha512",
